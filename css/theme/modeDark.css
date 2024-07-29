@@ -1,0 +1,45 @@
+:root{
+    --VeryDarkBlue: #161722;
+    --VeryDarkDesaturatedBlue: #25273c;
+    --LightGrayishBlue: #cacde8;
+    --LightGrayishBlueHover: #e4e5f1; /*Hover*/
+    --DarkGrayishBlue: #777a92;
+    --VeryDarkGrayishBlue: #4d5066;
+    --VeryDarkGrayishBlue-2 : #393a4c;
+}
+
+body.activeModeTheme{
+    background-color: var(--VeryDarkBlue);
+    &::before{
+        background: url(../../images/bg-desktop-dark.jpg) center no-repeat;
+        background-size: cover;
+    }
+
+    .content__all{
+        .inputCreate--todo{
+            background-color: var(--VeryDarkDesaturatedBlue);
+            filter: drop-shadow(0px 25px 10px hsl(0, 0%, 0%, 30%));
+        }
+
+        .contentTodoAPP{
+            background-color: var(--VeryDarkDesaturatedBlue);
+            filter: drop-shadow(0px 25px 10px hsl(0, 0%, 0%, 30%));
+        }
+
+        .filaTodo{border-color: var(--VeryDarkGrayishBlue-2) !important;}
+        .txtTodo{color: var(--LightGrayishBlue) !important;}
+        .checkboxInputs{border-color: var(--VeryDarkGrayishBlue-2) !important;}
+    
+        .clearComplete, .navItems{
+            color: var(--VeryDarkGrayishBlue) !important;
+            &:hover{color: var(--LightGrayishBlueHover) !important;}
+        }
+    
+        .bx-items-todoApp{color: var(--VeryDarkGrayishBlue) !important;}
+    
+        .colorActive{color: hsl(220, 98%, 61%) !important;}
+
+        .recorder{color: var(--VeryDarkGrayishBlue);}
+        .todoComplete{color: #4D5067 !important;}
+    }
+}

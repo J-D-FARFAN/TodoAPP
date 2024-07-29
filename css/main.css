@@ -1,0 +1,81 @@
+@import url(styles.css);
+@import url(theme/modeDark.css);
+@import url(layout/media375.css);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    /*Light Theme*/
+    --VeryLightGray: #fafafa;
+    --VeryLightGrayishBlue: #E3E4F1;
+    --LightGrayishBlue: #d2d3db;
+    --DarkGrayishBlue: #9394a5;
+    --VeryDarkGrayishBlue: #484b6a;
+
+    --BrightBlue: hsl(220, 98%, 61%);
+
+    /*TXT*/
+    --txt-preset-1: 40px;
+    --txt-preset-2: 18px;
+    --txt-preset-3: 14px;
+
+    --fontFamily: "Josefin Sans", sans-serif;
+    --spacing-preset-1: 40px;
+    --spacing-preset-2: 24px;
+    --spacing-preset-3: 19px;
+
+    --borderR: 5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily);
+}
+
+.bx-inputsSelected{
+    display: flex;
+    align-items: center;
+    .checkboxInputs{
+        position: relative;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--VeryLightGrayishBlue);
+        border-radius: 50%;
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before{
+            position: absolute;
+            content: '✔';
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(130deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: var(--VeryLightGray);
+            font-weight: bold;
+        }
+
+        &:checked::before{display: flex;}
+    }
+}
+
+.colorActive{color: var(--BrightBlue) !important;}
+.hoverActiveInput{transition: .3s ease; &:hover{border-color: var(--BrightBlue);}}
+.todoComplete{text-decoration: line-through !important; color: #D1D2DA !important;}
+
+.activeTodoDefautl{text-decoration: line-through !important; color: #D1D2DA !important;}
+.activeInputDefautl{
+    &::before{display: flex !important;}
+}

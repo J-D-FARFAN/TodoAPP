@@ -1,0 +1,184 @@
+@import url(main.css);
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 300px;
+        background: url(../images/bg-desktop-light.jpg) center no-repeat;
+        background-size: cover;
+        top: 0;
+        z-index: -1;
+    }
+
+    .content__all{
+        width: 540px;
+
+        .contentHeader--todoApp{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-preset-1);
+
+            .title{
+                font-size: var(--txt-preset-1);
+                letter-spacing: 15px;
+                text-transform: uppercase;
+                color: var(--VeryLightGray);
+            }
+
+            .modeLight{display: none; cursor: pointer;}
+            .modeDark{cursor: pointer;}
+
+        }
+
+        .inputCreate--todo{
+            height: 64px;
+            display: flex;
+            gap: var(--spacing-preset-2);
+            padding: 0 var(--spacing-preset-2);
+            margin-bottom: var(--spacing-preset-2);
+            background-color: white;
+            border-radius: var(--borderR);
+            filter: drop-shadow(0px 35px 50px hsl(237, 20%, 80%, 50%));
+
+
+            #createTodo{
+                border: none;
+                outline: none;
+                font-size: var(--txt-preset-2);
+                color: var(--DarkGrayishBlue);
+                background-color: transparent;
+                &::placeholder{color: var(--DarkGrayishBlue);}
+            }
+        }
+
+        .contentTodoAPP{
+            background-color: white;
+            filter: drop-shadow(0px 35px 50px hsl(237, 20%, 80%, 50%));
+            border-radius: var(--borderR);
+
+            .todoAPP{
+                width: 100%;
+                height: fit-content;
+                border-collapse: collapse;
+
+                .filaTodo{
+                    height: 66px;
+                    border-bottom: 1px solid var(--VeryLightGrayishBlue);
+
+                    td{
+                        padding: 0 var(--spacing-preset-2);
+                        cursor: pointer;
+                        transition: all .3s ease;
+
+
+                        .bx-inputsSelected{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .sectionInfoTodo{
+                                display: flex;
+                                align-items: center;
+                                gap: var(--spacing-preset-2);
+                                .txtTodo{
+                                    font-size: var(--txt-preset-2);
+                                    color: var(--VeryDarkGrayishBlue);
+                                }
+                            }
+                            .deleteTodo{
+                                display: none;
+                                cursor: pointer;
+                            }
+                        }
+                        &:hover{
+                            .deleteTodo{display: block;}
+                        }
+                    }
+
+                }
+            }
+
+            .navbarTodoApp{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem var(--spacing-preset-2);
+                transition: .3s ease;
+
+                .bx-items-todoApp{
+                    font-size: var(--txt-preset-3);
+                    color: var(--DarkGrayishBlue);
+                    cursor: pointer;
+                }
+
+                .navbarTodo{
+                    display: flex;
+                    list-style: none;
+                    gap: var(--spacing-preset-3);
+
+                    .navItems{
+                        color: var(--DarkGrayishBlue);
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: .3s ease;
+
+                        &:hover{color: var(--VeryDarkGrayishBlue);}
+                    }
+                }
+
+                .clearComplete{transition: .3s ease; &:hover{color: var(--VeryDarkGrayishBlue);}}
+            }
+        }
+
+        .recorder{
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: var(--DarkGrayishBlue);
+            font-size: var(--txt-preset-3);
+            margin-top: 49px;
+        }
+
+
+        .navbarTodoAppMobile{
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 1rem var(--spacing-preset-2);
+            transition: .3s ease;
+            filter: drop-shadow(0px 35px 50px hsl(237, 20%, 80%, 50%));
+            margin-top: 24px;
+            border-radius: var(--borderR);
+
+
+            .navbarTodo{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                gap: var(--spacing-preset-3);
+
+                .navItems{
+                    color: var(--DarkGrayishBlue);
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: .3s ease;
+
+                    &:hover{color: var(--VeryDarkGrayishBlue);}
+                }
+            }
+        }
+    }
+}
+

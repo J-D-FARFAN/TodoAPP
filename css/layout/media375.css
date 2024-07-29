@@ -1,0 +1,59 @@
+
+@media screen and (min-width: 212px) and (max-width: 569px){
+    body{
+        &::before{
+            background: url(../../images/bg-mobile-light.jpg) center no-repeat;
+            background-size: cover;
+        }
+
+        .content__all{
+            width: 100%;
+            margin: 24px;
+
+            .contentTodoAPP{
+                .todoAPP{
+                    .filaTodo{
+                        td{
+                            .bx-inputsSelected{
+                                .sectionInfoTodo{
+                                    .txtTodo{font-size: 12px;}
+                                }
+                            }
+                        }
+                    }
+                }
+                .navbarTodoApp{
+                    .navbarTodo{display: none;}
+                }
+            }
+
+            .navbarTodoAppMobile{display: flex;}
+        }
+    }
+
+    .bx-inputsSelected{
+        .checkboxInputs{
+            width: 20px !important;
+            height: 20px !important;
+
+            &::before{
+                width: 20px !important;
+                height: 20px !important;
+            }
+        }
+
+        .deleteTodo{display: block !important;}
+    }
+
+    body.activeModeTheme{
+        &::before{
+            background: url(../../images/bg-mobile-dark.jpg) left no-repeat;
+            background-size: cover;
+        }
+
+        .navbarTodoAppMobile{
+            background-color: #25273c;
+            filter: drop-shadow(0px 25px 10px hsl(0, 0%, 0%, 30%));
+        }
+    }
+}   
